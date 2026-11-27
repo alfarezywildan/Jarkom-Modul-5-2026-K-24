@@ -699,10 +699,4 @@ Ditemukan **2 penyebab sabotase** pada tabel `nat` chain `POSTROUTING`:
 
 ---
 
-## Arsip Lengkap Seluruh Script (`scripts/`)
 
-Seluruh script konfigurasi yang digunakan pada Soal 1–10 juga tersimpan rapi di dalam folder [`scripts/`](scripts/):
-- **[`scripts/routers/`](scripts/routers/):** 17 script routing, NAT, & firewall router (`gendo.sh`, `yui.sh`, `rei.sh`, `shinji.sh`, `mari.sh`, `hikari.sh`, `kaworu.sh`, `asuka.sh`, `kensuke.sh`, `ritsuko.sh`, `kaji.sh`, `misato.sh`, `shigeru.sh`, `makoto.sh`, `fuyutsuki.sh`, `maya.sh`, `toji.sh`).
-- **[`scripts/servers/`](scripts/servers/):** 5 script instalasi paket & listener `nc` server (`casper.sh`, `balthasar.sh`, `melchior.sh`, `penpen.sh`, `tokyo3core.sh`).
-- **[`scripts/fixes/`](scripts/fixes/):** 3 script perbaikan sabotase (`fix_soal9_shigeru.sh`, `fix_soal10_misato.sh`, `fix_soal10_gendou.sh`).
-- **[`scripts/interfaces/`](scripts/interfaces/):** Konfigurasi permanen `/etc/network/interfaces` seluruh 17 router ([`routers_interfaces.txt`](scripts/interfaces/routers_interfaces.txt)) dan 25 host ([`hosts_interfaces_setup.sh`](scripts/interfaces/hosts_interfaces_setup.sh)).
