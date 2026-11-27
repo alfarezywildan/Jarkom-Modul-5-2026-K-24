@@ -1,0 +1,141 @@
+=== KONFIGURASI /etc/network/interfaces SELURUH 17 ROUTER (SESUAI KANVAS GNS3 K-24) ===
+
+[Gendou] (eth0=NAT1, eth1=Switch-Cmd, eth2=Yui, eth3=Hikari, eth4=Fuyutsuki, eth5=Shigeru, eth6=Misato, eth7=Asuka, eth8=Kaji)
+auto eth0
+iface eth0 inet dhcp
+    up sysctl -w net.ipv4.ip_forward=1
+auto eth1
+iface eth1 inet static
+    address 192.223.4.105
+    netmask 255.255.255.252
+auto eth2
+iface eth2 inet static
+    address 192.223.4.109
+    netmask 255.255.255.252
+auto eth3
+iface eth3 inet static
+    address 192.223.4.113
+    netmask 255.255.255.252
+auto eth4
+iface eth4 inet static
+    address 192.223.4.133
+    netmask 255.255.255.252
+auto eth5
+iface eth5 inet static
+    address 192.223.4.129
+    netmask 255.255.255.252
+auto eth6
+iface eth6 inet static
+    address 192.223.4.125
+    netmask 255.255.255.252
+auto eth7
+iface eth7 inet static
+    address 192.223.4.117
+    netmask 255.255.255.252
+auto eth8
+iface eth8 inet static
+    address 192.223.4.121
+    netmask 255.255.255.252
+
+[Yui] (eth0=Gendou, eth1=Rei, eth2=Shinji, eth3=Mari, eth4=Switch-Hangar)
+auto eth0
+iface eth0 inet static
+    address 192.223.4.110
+    netmask 255.255.255.252
+    up sysctl -w net.ipv4.ip_forward=1
+auto eth1
+iface eth1 inet static
+    address 192.223.4.153
+    netmask 255.255.255.252
+auto eth2
+iface eth2 inet static
+    address 192.223.4.157
+    netmask 255.255.255.252
+auto eth3
+iface eth3 inet static
+    address 192.223.4.161
+    netmask 255.255.255.252
+auto eth4
+iface eth4 inet static
+    address 192.223.3.1
+    netmask 255.255.255.128
+
+[Asuka] (eth0=Gendou, eth1=Switch-Archive, eth2=Ritsuko, eth3=Kensuke)
+auto eth0
+iface eth0 inet static
+    address 192.223.4.118
+    netmask 255.255.255.252
+    up sysctl -w net.ipv4.ip_forward=1
+auto eth1
+iface eth1 inet static
+    address 192.223.4.97
+    netmask 255.255.255.252
+auto eth2
+iface eth2 inet static
+    address 192.223.4.141
+    netmask 255.255.255.252
+auto eth3
+iface eth3 inet static
+    address 192.223.4.137
+    netmask 255.255.255.252
+
+[Fuyutsuki] (eth0=Gendou, eth1=Switch-Terminal, eth2=Maya, eth3=Toji)
+auto eth0
+iface eth0 inet static
+    address 192.223.4.134
+    netmask 255.255.255.252
+    up sysctl -w net.ipv4.ip_forward=1
+auto eth1
+iface eth1 inet static
+    address 192.223.4.57
+    netmask 255.255.255.248
+auto eth2
+iface eth2 inet static
+    address 192.223.4.145
+    netmask 255.255.255.252
+auto eth3
+iface eth3 inet static
+    address 192.223.4.149
+    netmask 255.255.255.252
+
+[Shigeru] (eth0=Gendou, eth1=Switch-Monolith, eth2=Makoto)
+auto eth0
+iface eth0 inet static
+    address 192.223.4.130
+    netmask 255.255.255.252
+    up sysctl -w net.ipv4.ip_forward=1
+auto eth1
+iface eth1 inet static
+    address 192.223.4.81
+    netmask 255.255.255.248
+auto eth2
+iface eth2 inet static
+    address 192.223.4.169
+    netmask 255.255.255.252
+
+[Hikari] (eth0=Gendou, eth1=Switch-Comm, eth2=Kaworu)
+auto eth0
+iface eth0 inet static
+    address 192.223.4.114
+    netmask 255.255.255.252
+    up sysctl -w net.ipv4.ip_forward=1
+auto eth1
+iface eth1 inet static
+    address 192.223.2.1
+    netmask 255.255.255.0
+auto eth2
+iface eth2 inet static
+    address 192.223.4.165
+    netmask 255.255.255.252
+
+[Rei] eth0=192.223.4.154/30 (255.255.255.252), eth1=192.223.0.1/23 (255.255.254.0)
+[Shinji] eth0=192.223.4.158/30 (255.255.255.252), eth1=192.223.4.1/27 (255.255.255.224)
+[Mari] eth0=192.223.4.162/30 (255.255.255.252), eth1=192.223.4.33/28 (255.255.255.240)
+[Kaworu] eth0=192.223.4.166/30 (255.255.255.252), eth1=192.223.3.225/27 (255.255.255.224)
+[Kensuke] eth0=192.223.4.138/30 (255.255.255.252), eth1=192.223.3.129/26 (255.255.255.192)
+[Ritsuko] eth0=192.223.4.142/30 (255.255.255.252), eth1=192.223.4.49/29 (255.255.255.248)
+[Kaji] eth0=192.223.4.122/30 (255.255.255.252), eth1=192.223.4.101/30 (255.255.255.252)
+[Misato] eth0=192.223.4.126/30 (255.255.255.252), eth1=192.223.4.65/29 (255.255.255.248)
+[Makoto] eth0=192.223.4.170/30 (255.255.255.252), eth1=192.223.4.89/29 (255.255.255.248)
+[Maya] eth0=192.223.4.146/30 (255.255.255.252), eth1=192.223.3.193/27 (255.255.255.224)
+[Toji] eth0=192.223.4.150/30 (255.255.255.252), eth1=192.223.4.73/29 (255.255.255.248)
